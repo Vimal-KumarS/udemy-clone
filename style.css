@@ -11,6 +11,10 @@ font-family: "Gabarito", serif;
     justify-content: space-between;
     border-bottom: solid black 1px;
     align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: white ;
+    z-index: 1;
     
 
 }
@@ -23,12 +27,14 @@ font-family: "Gabarito", serif;
     border-radius: 30px;
     display: flex;
     width: 50%;
+  
 }
 .navbar_s2 input{
     border: none;
     width: 100%;
     padding-left: 10px;
     font-size: 16px;
+    background-color: transparent;
     
 }
 .navbar_s2 input:focus{
@@ -38,6 +44,9 @@ font-family: "Gabarito", serif;
     display: flex;
     gap: 10px;
 }
+.highlighter{
+    cursor: pointer;
+}
 .catagories{
     display: flex;
     padding: 10px;
@@ -45,14 +54,48 @@ font-family: "Gabarito", serif;
     justify-content: space-around;
     border-bottom: solid black 1px;
 }
+.highlighter{
+    position: relative;
+
+}
+.highlighter:hover .popup{
+    display: block;
+
+}
+.popup{
+    position: absolute;
+    border: solid black 2px;
+    top:150%;
+   right: 0;
+   padding: 10px;
+   width: 100px ;
+   background-color: white;
+   display: none;
+  
+}
 .catagories p{
     background-color: purple;
     flex-basis: 10%;
-    border-radius: 20px;
+    display: inline-block;
+    border-radius: 30px;
     padding: 10px;
 }
 .udemy-image img{
     width: 100%;
+   
+}
+.udemy-image{
+    position: relative;
+}
+.udemy-image--sale{
+    border: solid black 2px;
+    background-color: white;
+    z-index: 1;
+    width: 300px;
+    padding: 20px;
+    position: absolute;
+    top: 150px;
+    left: 200px;
 }
 .recommended{
     padding: 10px;
