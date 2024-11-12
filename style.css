@@ -1,169 +1,227 @@
-*{
-    margin: 0px;
-    padding: 0px;
-}
-body{
-font-family: "Gabarito", serif;
-}
-.navbar{
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    border-bottom: solid black 1px;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    background-color: white ;
-    z-index: 1;
-    
+ * {
+     margin: 0px;
+     padding: 0px;
+ }
 
-}
-.navbar_s1{
-    color: purple;
-}
-.navbar_s2{
-    border:  solid black 1px;
-    padding: 10px;
-    border-radius: 30px;
-    display: flex;
-    width: 50%;
-  
-}
-.navbar_s2 input{
-    border: none;
-    width: 100%;
-    padding-left: 10px;
-    font-size: 16px;
+ body {
+     font-family: "Gabarito", serif;
+ }
+
+ .navbar {
+     padding: 10px;
+     display: flex;
+     justify-content: space-between;
+     border-bottom: solid black 1px;
+     align-items: center;
+     position: sticky;
+     top: 0;
+     background-color: white;
+     z-index: 1;
+
+
+ }
+
+ .navbar_s1 {
+     color: purple;
+ }
+
+ .navbar_s2 {
+     border: solid black 1px;
+     padding: 10px;
+     border-radius: 30px;
+     display: flex;
+     width: 50%;
+
+ }
+
+ .navbar_s2 input {
+     border: none;
+     width: 100%;
+     padding-left: 10px;
+     font-size: 16px;
+     background-color: transparent;
+
+ }
+
+ .navbar_s2 input:focus {
+     outline: none;
+ }
+
+ .navbar_s3 {
+     display: flex;
+     gap: 10px;
+ }
+
+
+
+ .catagories {
+     display: flex;
+     padding: 10px;
+     flex-wrap: wrap;
+     justify-content: space-around;
+     border-bottom: solid black 1px;
+     cursor: pointer;
+    
+ }
+ .catagories p:hover{
+    transition: 1s;
     background-color: transparent;
-    
-}
-.navbar_s2 input:focus{
-    outline: none;
-}
-.navbar_s3{
-    display: flex;
-    gap: 10px;
-}
-.highlighter{
-    cursor: pointer;
-}
-.catagories{
-    display: flex;
-    padding: 10px;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    border-bottom: solid black 1px;
-}
-.highlighter{
-    position: relative;
-
-}
-.highlighter:hover .popup{
-    display: block;
-
-}
-.popup{
-    position: absolute;
-    border: solid black 2px;
-    top:150%;
-   right: 0;
-   padding: 10px;
-   width: 100px ;
-   background-color: white;
-   display: none;
+    color: black;
   
-}
-.catagories p{
-    background-color: purple;
-    flex-basis: 10%;
-    display: inline-block;
-    border-radius: 30px;
-    padding: 10px;
-}
-.udemy-image img{
-    width: 100%;
-   
-}
-.udemy-image{
-    position: relative;
-}
-.udemy-image--sale{
-    border: solid black 2px;
-    background-color: white;
-    z-index: 1;
-    width: 300px;
-    padding: 20px;
-    position: absolute;
-    top: 150px;
-    left: 200px;
-}
-.recommended{
-    padding: 10px;
-}
-.recommended__container{
-    display: flex;
-    flex-wrap: wrap;
-    padding: 10px;
-    justify-content: space-around;
 
-   
-}
-.course_card{
-    width: 200px;
-}
-.course_card img{
-    width: 100%;
-}
-.topics{
-    padding: 10px;
-}
-.topics_container{
-    display: flex;
-    margin-top: 10px;
-    gap: 10px;
-    flex-wrap: wrap;
+ }
+
+ .highlighter {
+     position: relative;
+     cursor: pointer;
 
 
-}
-.topics_container p{
-    border: solid gray 2px;
-    padding: 5px;
-    gap: 10px;
-    flex-grow: 1;
-    flex-basis: 25%;
-}
-.popular{
-    padding: 10px;
-}
-.popular__container{
-    display: flex;
-    margin-top: 10px;
-    gap: 10px;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    flex-basis: 50%
-}
-.footer{
-    display: flex;
-    padding: 10px;
-    gap: 10px;
-    color: white;
-    background-color: black;
+ }
 
-}
-.footer__container1 p, .footer__container2 p{
-    gap: 5px;
+ .highlighter:hover .popup {
+     display: block;
 
-}
-.footerend{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
-    background-color: black;
-    
-}
-.footerend h1, .footerend p{
-    color: purple; 
 
+ }
+
+ .popup {
+     position: absolute;
+     border: solid black 2px;
+     top: 150%;
+     right: 0;
+     padding: 10px;
+     width: 100px;
+     background-color: white;
+     display: none;
+
+ }
+
+ .catagories p {
+     background-color: purple;
+     flex-basis: 10%;
+     display: inline-block;
+     border-radius: 30px;
+     padding: 10px;
+     border: solid black 1px;
+ }
+
+ .udemy-image img {
+     width: 100%;
+
+ }
+
+ .udemy-image {
+     position: relative;
+ }
+
+ .udemy-image--sale {
+     border: solid black 2px;
+     background-color: white;
+     width: 30%;
+     padding: 10px;
+     position: absolute;
+     top: 100px;
+     left: 40px;
+     animation-name: zoom;
+     animation-duration: 2s;
+     opacity: 0;
+     animation-fill-mode: forwards;
+ }
+@keyframes zoom {
+    0%{
+        opacity: 0;
+        transform: scale(0);
+    }
+ 100%{
+    opacity: 1;
+    transform: scale(1);
+ }   
 }
+
+ .recommended {
+     padding: 10px;
+ }
+
+ .recommended__container {
+     display: flex;
+     flex-wrap: wrap;
+     padding: 10px;
+     justify-content: space-around;
+
+
+ }
+
+ .course_card {
+     width: 200px;
+ }
+
+ .course_card img {
+     width: 100%;
+ }
+
+ .topics {
+     padding: 10px;
+ }
+
+ .topics_container {
+     display: flex;
+     margin-top: 10px;
+     gap: 10px;
+     flex-wrap: wrap;
+
+
+ }
+
+ .topics_container p {
+     border: solid gray 2px;
+     padding: 5px;
+     gap: 10px;
+     flex-grow: 1;
+     flex-basis: 25%;
+ }
+
+ .popular {
+     padding: 10px;
+ }
+
+ .popular__container {
+     display: flex;
+     margin-top: 10px;
+     gap: 10px;
+     justify-content: space-around;
+     flex-wrap: wrap;
+     flex-basis: 50%
+ }
+
+ .footer {
+     display: flex;
+     padding: 10px;
+     gap: 10px;
+     color: white;
+     background-color: black;
+
+ }
+
+ .footer__container1 p,
+ .footer__container2 p {
+     gap: 5px;
+     padding: 10px;
+
+
+ }
+
+ .footerend {
+     display: flex;
+     align-items: center;
+
+     padding: 10px;
+     justify-content: space-between;
+     background-color: black;
+
+ }
+
+ .footerend h1,
+ .footerend p {
+     color: purple;
+
+ }
